@@ -1,0 +1,35 @@
+source_path,category,service,incident_id,title
+runbooks/api_latency.md,runbooks,checkout-api,,Api Latency
+runbooks/redis_timeout.md,runbooks,platform,,Redis Timeout
+runbooks/db_pool.md,runbooks,platform,,Db Pool
+runbooks/crashloop.md,runbooks,platform,,Crashloop
+runbooks/oom.md,runbooks,platform,,Oom
+runbooks/dns.md,runbooks,platform,,Dns
+runbooks/tls_certificate.md,runbooks,platform,,Tls Certificate
+runbooks/queue_backlog.md,runbooks,platform,,Queue Backlog
+runbooks/auth_401.md,runbooks,platform,,Auth 401
+docs/system_architecture.md,docs,checkout-api,,System Architecture
+docs/slo_policy.md,docs,checkout-api,,Slo Policy
+docs/deployment_policy.md,docs,platform,,Deployment Policy
+incidents/INC-001-checkout-redis.md,incidents,checkout-api,INC-001,Inc 001 Checkout Redis
+incidents/INC-002-payments-db-pool.md,incidents,payments-api,INC-002,Inc 002 Payments Db Pool
+incidents/INC-003-dns.md,incidents,inventory-service,INC-003,Inc 003 Dns
+incidents/INC-004-auth-clock-skew.md,incidents,auth-service,INC-004,Inc 004 Auth Clock Skew
+incidents/INC-005-worker-oom.md,incidents,orders-worker,INC-005,Inc 005 Worker Oom
+incidents/INC-006-queue-backlog.md,incidents,orders-worker,INC-006,Inc 006 Queue Backlog
+postmortems/PM-001-redis.md,postmortems,platform,,Pm 001 Redis
+postmortems/PM-002-db-leak.md,postmortems,platform,,Pm 002 Db Leak
+postmortems/PM-003-dns.md,postmortems,platform,,Pm 003 Dns
+configs/checkout.env.txt,configs,checkout-api,,Checkout.Env
+configs/checkout.previous.env.txt,configs,checkout-api,,Checkout.Previous.Env
+configs/payments.env.txt,configs,payments-api,,Payments.Env
+configs/orders_worker.env.txt,configs,orders-worker,,Orders Worker.Env
+k8s/orders-worker-events.log,k8s,orders-worker,,Orders Worker Events
+k8s/coredns-events.log,k8s,platform,,Coredns Events
+logs/checkout.log,logs,checkout-api,,Checkout
+logs/payments.log,logs,payments-api,,Payments
+logs/auth.log,logs,auth-service,,Auth
+logs/orders-worker.log,logs,orders-worker,,Orders Worker
+alerts/checkout_alerts.md,alerts,platform,,Checkout Alerts
+alerts/payments_alerts.md,alerts,platform,,Payments Alerts
+alerts/platform_alerts.md,alerts,platform,,Platform Alerts

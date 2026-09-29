@@ -1,0 +1,2 @@
+2026-08-19T07:20:12Z ERROR service=auth-service node=blue-12 validation="token used before issued" clock_offset_seconds=94
+2026-08-19T07:20:13Z ERROR service=auth-service node=blue-14 validation="iat in future" clock_offset_seconds=92

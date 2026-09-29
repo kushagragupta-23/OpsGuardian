@@ -1,0 +1,2 @@
+2026-08-21T12:40:10Z pod/orders-worker-7df9 Last State: Terminated Reason: OOMKilled Exit Code: 137
+2026-08-21T12:40:10Z pod/orders-worker-7df9 Restart Count: 6 memory_limit=768Mi

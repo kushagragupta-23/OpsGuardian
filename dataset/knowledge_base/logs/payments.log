@@ -1,0 +1,3 @@
+2026-08-16T09:33:04Z ERROR service=payments-api request_id=P991 error=PoolTimeout active=30 idle=0 waiters=118
+2026-08-16T09:33:05Z WARN postgres_cpu=42% db_max_connections_headroom=120
+2026-08-16T09:33:08Z ERROR gateway timeout path=/authorize release=v4.6.1

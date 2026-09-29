@@ -1,0 +1,4 @@
+2026-08-14T10:01:48Z INFO release=v2.18.0 rollout=100%
+2026-08-14T10:04:12Z ERROR service=checkout-api request_id=C901 error=RedisTimeoutError pool_active=20 pool_waiters=34
+2026-08-14T10:05:02Z ERROR request_id=C923 status=504 dependency=redis duration_ms=3021
+2026-08-14T10:08:30Z WARN redis_pool_active=20 redis_pool_waiters=46 redis_server_cpu=31%

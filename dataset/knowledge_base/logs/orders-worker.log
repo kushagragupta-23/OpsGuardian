@@ -1,0 +1,3 @@
+2026-08-23T15:10:12Z WARN service=orders-worker fulfillment_status=429 retry=1 queue_depth=84000
+2026-08-23T15:10:17Z WARN fulfillment_status=429 retry=2 queue_depth=92000 oldest_message_age_seconds=790
+2026-08-23T15:12:00Z INFO worker_cpu=18% concurrency=20

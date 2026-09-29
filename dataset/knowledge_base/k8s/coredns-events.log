@@ -1,0 +1,3 @@
+2026-08-18T04:14:09Z deployment/coredns rollout revision=31
+2026-08-18T04:15:12Z coredns ERROR upstream resolver timeout 10.20.0.53
+2026-08-18T04:15:15Z coredns metric dns_response_rcode=SERVFAIL increasing
