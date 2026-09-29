@@ -1,24 +1,26 @@
-# OpsGuardian - DevOps Incident Resolution RAG
+# OpsGuardian
 
-A complete local-first RAG portfolio project for Kushagra. **The main notebook follows Sir's Generative AI Labs 1-6 pattern** while the domain-specific code adds a realistic DevOps incident corpus and application interfaces.
+OpsGuardian is a local incident-investigation tool for service and platform teams. It searches incident records, postmortems, runbooks, alerts, configuration, logs and Kubernetes events, then lays out the evidence and suggests the next checks.
 
-## Included dataset
+The main notebook follows the instructor's Generative AI Labs 1-6 pattern. The rest of the repository applies that pattern to a small, fixed DevOps incident corpus.
 
-The ZIP includes a ready-to-index dataset under `dataset/` with **34 source files** and **24 evaluation questions**. No external dataset download is required for the demo.
+## Included data
+
+The repository includes a ready-to-index dataset under `dataset/` with **34 source files** and **24 evaluation questions**. No external download is required for the demo.
 
 Evidence types include runbooks, incident records, postmortems, Kubernetes events, service configs, logs, alerts/SLOs and architecture/deployment docs.
 
-## Main class-style flow
+## Retrieval and answer flow
 
 `low-temperature LLM -> load -> split 1000/200 -> OllamaEmbeddings -> Chroma -> similarity/MMR/BM25+Chroma -> ChatPromptTemplate -> Pydantic -> LCEL -> MultiQuery -> LangGraph -> retrieval evaluation`
 
-## Local models
+## Models
 
 - Chat: `qwen3:8b` through Ollama by default
 - Embeddings: `nomic-embed-text`
 - Optional Groq generation is supported via `.env`
 
-## Windows setup
+## Run on Windows
 
 ```powershell
 ollama pull qwen3:8b
@@ -53,6 +55,6 @@ python evaluate.py
 ```
 Compares similarity, MMR and hybrid retrieval using source hit, category hit and reciprocal rank.
 
-## Important safety/design point
+## Scope and limits
 
 OpsGuardian is decision support. It retrieves evidence and suggests safe diagnostic steps; it does not directly execute production changes.
