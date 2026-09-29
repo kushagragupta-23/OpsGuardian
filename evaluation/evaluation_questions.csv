@@ -1,0 +1,25 @@
+question_id,service,question,expected_source,expected_category,expected_keyword
+Q01,checkout-api,Why did checkout latency spike after v2.18.0?,incidents/INC-001-checkout-redis.md,incidents,redis
+Q02,checkout-api,Should we flush Redis to solve the checkout incident?,postmortems/PM-001-redis.md,postmortems,flush
+Q03,checkout-api,What changed in the Redis pool between current and previous checkout config?,configs/checkout.env.txt,configs,pool
+Q04,payments-api,What caused PoolTimeout during the payments outage?,incidents/INC-002-payments-db-pool.md,incidents,connection
+Q05,payments-api,Was database CPU the main cause of the payment failure?,logs/payments.log,logs,cpu
+Q06,payments-api,What permanent fix was recommended for the payment connection leak?,postmortems/PM-002-db-leak.md,postmortems,connection
+Q07,inventory-service,What evidence shows the inventory outage was DNS related?,incidents/INC-003-dns.md,incidents,dns
+Q08,platform,What should I check when I see Name or service not known?,runbooks/dns.md,runbooks,dns
+Q09,auth-service,Why did tokens suddenly fail with iat in future?,incidents/INC-004-auth-clock-skew.md,incidents,clock
+Q10,auth-service,What should be checked during a broad 401 spike?,runbooks/auth_401.md,runbooks,401
+Q11,orders-worker,Why was the worker restarted with exit code 137?,incidents/INC-005-worker-oom.md,incidents,oom
+Q12,orders-worker,What Kubernetes evidence confirms the worker was OOMKilled?,k8s/orders-worker-events.log,k8s,oom
+Q13,orders-worker,Why did scaling workers make the queue incident worse?,incidents/INC-006-queue-backlog.md,incidents,429
+Q14,orders-worker,What should be checked before scaling consumers for a backlog?,runbooks/queue_backlog.md,runbooks,downstream
+Q15,platform,What is the escalation rule for a payment error rate above 20 percent?,docs/slo_policy.md,docs,sev-1
+Q16,checkout-api,When is rollback appropriate after a deployment?,docs/deployment_policy.md,docs,rollback
+Q17,checkout-api,Which alert detects Redis client-pool saturation?,alerts/checkout_alerts.md,alerts,waiters
+Q18,platform,What should be done for an expired TLS certificate?,runbooks/tls_certificate.md,runbooks,certificate
+Q19,platform,What alert pages the owner when a production pod is OOMKilled?,alerts/platform_alerts.md,alerts,oom
+Q20,checkout-api,Which downstream systems does checkout-api depend on?,docs/system_architecture.md,docs,redis
+Q21,platform,Who won the cricket match yesterday?,,unanswerable,
+Q22,payments-api,Should we just increase the DB pool size permanently?,runbooks/db_pool.md,runbooks,pool
+Q23,orders-worker,What is the worker memory limit in the bundled config?,configs/orders_worker.env.txt,configs,768
+Q24,platform,What change triggered the DNS incident?,k8s/coredns-events.log,k8s,coredns

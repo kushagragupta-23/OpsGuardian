@@ -1,0 +1,4 @@
+method,source_hit,category_hit,reciprocal_rank
+hybrid,0.913,0.913,0.562
+mmr,0.652,0.739,0.496
+similarity,0.652,0.696,0.457

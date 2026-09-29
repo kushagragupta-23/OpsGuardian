@@ -1,0 +1,70 @@
+question_id,method,source_hit,category_hit,reciprocal_rank,sources
+Q01,similarity,1,1,1.0,incidents/INC-001-checkout-redis.md | incidents/INC-001-checkout-redis.md | incidents/INC-001-checkout-redis.md | runbooks/api_latency.md
+Q02,similarity,0,0,0.0,configs/checkout.previous.env.txt | configs/checkout.previous.env.txt | configs/checkout.previous.env.txt | configs/checkout.env.txt
+Q03,similarity,1,1,0.25,configs/checkout.previous.env.txt | configs/checkout.previous.env.txt | configs/checkout.previous.env.txt | configs/checkout.env.txt
+Q04,similarity,1,1,1.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log
+Q05,similarity,1,1,0.25,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log
+Q06,similarity,0,0,0.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log
+Q07,similarity,1,1,1.0,incidents/INC-003-dns.md | incidents/INC-003-dns.md | incidents/INC-003-dns.md
+Q08,similarity,1,1,1.0,runbooks/dns.md | runbooks/dns.md | runbooks/dns.md | configs/checkout.previous.env.txt
+Q09,similarity,1,1,0.25,logs/auth.log | logs/auth.log | logs/auth.log | incidents/INC-004-auth-clock-skew.md
+Q10,similarity,0,0,0.0,incidents/INC-004-auth-clock-skew.md | incidents/INC-004-auth-clock-skew.md | incidents/INC-004-auth-clock-skew.md | logs/auth.log
+Q11,similarity,1,1,0.25,k8s/orders-worker-events.log | k8s/orders-worker-events.log | k8s/orders-worker-events.log | incidents/INC-005-worker-oom.md
+Q12,similarity,1,1,0.25,incidents/INC-005-worker-oom.md | incidents/INC-005-worker-oom.md | incidents/INC-005-worker-oom.md | k8s/orders-worker-events.log
+Q13,similarity,1,1,1.0,incidents/INC-006-queue-backlog.md | incidents/INC-006-queue-backlog.md | incidents/INC-006-queue-backlog.md | incidents/INC-005-worker-oom.md
+Q14,similarity,0,0,0.0,incidents/INC-006-queue-backlog.md | incidents/INC-006-queue-backlog.md | incidents/INC-006-queue-backlog.md | incidents/INC-005-worker-oom.md
+Q15,similarity,1,1,1.0,docs/slo_policy.md | docs/slo_policy.md | docs/slo_policy.md | alerts/payments_alerts.md
+Q16,similarity,0,1,0.0,incidents/INC-001-checkout-redis.md | incidents/INC-001-checkout-redis.md | incidents/INC-001-checkout-redis.md | docs/slo_policy.md
+Q17,similarity,0,0,0.0,configs/checkout.env.txt | configs/checkout.env.txt | configs/checkout.env.txt | configs/checkout.previous.env.txt
+Q18,similarity,1,1,1.0,runbooks/tls_certificate.md | runbooks/tls_certificate.md | runbooks/tls_certificate.md | alerts/platform_alerts.md
+Q19,similarity,1,1,0.25,runbooks/oom.md | runbooks/oom.md | runbooks/oom.md | alerts/platform_alerts.md
+Q20,similarity,1,1,1.0,docs/system_architecture.md | docs/system_architecture.md | docs/system_architecture.md | configs/checkout.previous.env.txt
+Q22,similarity,0,0,0.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | configs/payments.env.txt
+Q23,similarity,1,1,1.0,configs/orders_worker.env.txt | configs/orders_worker.env.txt | configs/orders_worker.env.txt | incidents/INC-005-worker-oom.md
+Q24,similarity,0,0,0.0,postmortems/PM-003-dns.md | postmortems/PM-003-dns.md | postmortems/PM-003-dns.md | runbooks/dns.md
+Q01,mmr,1,1,1.0,incidents/INC-001-checkout-redis.md | runbooks/api_latency.md | docs/slo_policy.md | docs/system_architecture.md
+Q02,mmr,0,0,0.0,configs/checkout.previous.env.txt | incidents/INC-001-checkout-redis.md | docs/system_architecture.md | docs/slo_policy.md
+Q03,mmr,0,1,0.0,configs/checkout.previous.env.txt | incidents/INC-001-checkout-redis.md | logs/checkout.log | docs/system_architecture.md
+Q04,mmr,1,1,1.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log | configs/payments.env.txt
+Q05,mmr,1,1,0.3333333333333333,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log | configs/payments.env.txt
+Q06,mmr,0,0,0.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | logs/payments.log | configs/payments.env.txt
+Q07,mmr,1,1,1.0,incidents/INC-003-dns.md | incidents/INC-003-dns.md | incidents/INC-003-dns.md
+Q08,mmr,1,1,1.0,runbooks/dns.md | configs/checkout.previous.env.txt | runbooks/api_latency.md | runbooks/db_pool.md
+Q09,mmr,1,1,0.25,logs/auth.log | logs/auth.log | logs/auth.log | incidents/INC-004-auth-clock-skew.md
+Q10,mmr,0,0,0.0,incidents/INC-004-auth-clock-skew.md | incidents/INC-004-auth-clock-skew.md | incidents/INC-004-auth-clock-skew.md | logs/auth.log
+Q11,mmr,1,1,0.5,k8s/orders-worker-events.log | incidents/INC-005-worker-oom.md | logs/orders-worker.log | configs/orders_worker.env.txt
+Q12,mmr,1,1,0.5,incidents/INC-005-worker-oom.md | k8s/orders-worker-events.log | logs/orders-worker.log | configs/orders_worker.env.txt
+Q13,mmr,1,1,1.0,incidents/INC-006-queue-backlog.md | incidents/INC-005-worker-oom.md | logs/orders-worker.log | configs/orders_worker.env.txt
+Q14,mmr,0,0,0.0,incidents/INC-006-queue-backlog.md | logs/orders-worker.log | configs/orders_worker.env.txt | k8s/orders-worker-events.log
+Q15,mmr,1,1,1.0,docs/slo_policy.md | alerts/payments_alerts.md | incidents/INC-002-payments-db-pool.md | incidents/INC-006-queue-backlog.md
+Q16,mmr,0,1,0.0,incidents/INC-001-checkout-redis.md | docs/slo_policy.md | runbooks/api_latency.md | docs/system_architecture.md
+Q17,mmr,0,0,0.0,configs/checkout.env.txt | incidents/INC-001-checkout-redis.md | runbooks/api_latency.md | docs/system_architecture.md
+Q18,mmr,1,1,1.0,runbooks/tls_certificate.md | alerts/platform_alerts.md | k8s/orders-worker-events.log | postmortems/PM-001-redis.md
+Q19,mmr,1,1,0.5,runbooks/oom.md | alerts/platform_alerts.md | k8s/orders-worker-events.log | docs/slo_policy.md
+Q20,mmr,1,1,1.0,docs/system_architecture.md | configs/checkout.previous.env.txt | docs/slo_policy.md | runbooks/api_latency.md
+Q22,mmr,0,0,0.0,incidents/INC-002-payments-db-pool.md | incidents/INC-002-payments-db-pool.md | configs/payments.env.txt | logs/payments.log
+Q23,mmr,1,1,1.0,configs/orders_worker.env.txt | incidents/INC-005-worker-oom.md | k8s/orders-worker-events.log | incidents/INC-006-queue-backlog.md
+Q24,mmr,1,1,0.3333333333333333,postmortems/PM-003-dns.md | runbooks/dns.md | k8s/coredns-events.log | incidents/INC-001-checkout-redis.md
+Q01,hybrid,1,1,1.0,incidents/INC-001-checkout-redis.md | runbooks/api_latency.md | runbooks/auth_401.md | runbooks/redis_timeout.md
+Q02,hybrid,1,1,0.2,configs/checkout.previous.env.txt | runbooks/redis_timeout.md | incidents/INC-001-checkout-redis.md | postmortems/PM-003-dns.md | postmortems/PM-001-redis.md | configs/checkout.env.txt
+Q03,hybrid,1,1,0.16666666666666666,configs/checkout.previous.env.txt | runbooks/redis_timeout.md | postmortems/PM-001-redis.md | postmortems/PM-002-db-leak.md | incidents/INC-001-checkout-redis.md | configs/checkout.env.txt
+Q04,hybrid,1,1,1.0,incidents/INC-002-payments-db-pool.md | runbooks/tls_certificate.md | runbooks/redis_timeout.md | postmortems/PM-003-dns.md | logs/payments.log
+Q05,hybrid,1,1,0.2,incidents/INC-002-payments-db-pool.md | postmortems/PM-002-db-leak.md | runbooks/redis_timeout.md | runbooks/db_pool.md | logs/payments.log
+Q06,hybrid,1,1,0.5,incidents/INC-002-payments-db-pool.md | postmortems/PM-002-db-leak.md | postmortems/PM-003-dns.md | runbooks/oom.md | logs/payments.log
+Q07,hybrid,1,1,1.0,incidents/INC-003-dns.md | postmortems/PM-003-dns.md | runbooks/dns.md | postmortems/PM-002-db-leak.md | postmortems/PM-001-redis.md
+Q08,hybrid,1,1,1.0,runbooks/dns.md | incidents/INC-003-dns.md | docs/slo_policy.md | postmortems/PM-001-redis.md | configs/checkout.previous.env.txt
+Q09,hybrid,1,1,0.2,logs/auth.log | runbooks/tls_certificate.md | runbooks/redis_timeout.md | alerts/platform_alerts.md | incidents/INC-004-auth-clock-skew.md
+Q10,hybrid,1,1,0.5,incidents/INC-004-auth-clock-skew.md | runbooks/auth_401.md | runbooks/tls_certificate.md | alerts/platform_alerts.md | logs/auth.log
+Q11,hybrid,1,1,1.0,incidents/INC-005-worker-oom.md | k8s/orders-worker-events.log | runbooks/oom.md | runbooks/crashloop.md | runbooks/queue_backlog.md
+Q12,hybrid,1,1,0.16666666666666666,incidents/INC-005-worker-oom.md | runbooks/crashloop.md | runbooks/queue_backlog.md | postmortems/PM-003-dns.md | runbooks/dns.md | k8s/orders-worker-events.log
+Q13,hybrid,1,1,1.0,incidents/INC-006-queue-backlog.md | runbooks/queue_backlog.md | docs/deployment_policy.md | runbooks/tls_certificate.md | incidents/INC-005-worker-oom.md
+Q14,hybrid,1,1,0.3333333333333333,incidents/INC-006-queue-backlog.md | runbooks/dns.md | runbooks/queue_backlog.md | alerts/checkout_alerts.md | alerts/payments_alerts.md | incidents/INC-005-worker-oom.md
+Q15,hybrid,1,1,1.0,docs/slo_policy.md | runbooks/api_latency.md | incidents/INC-002-payments-db-pool.md | runbooks/queue_backlog.md | alerts/payments_alerts.md
+Q16,hybrid,1,1,0.3333333333333333,incidents/INC-001-checkout-redis.md | runbooks/oom.md | docs/deployment_policy.md | runbooks/redis_timeout.md | docs/slo_policy.md
+Q17,hybrid,0,0,0.0,configs/checkout.env.txt | runbooks/redis_timeout.md | postmortems/PM-001-redis.md | docs/system_architecture.md | incidents/INC-001-checkout-redis.md | configs/checkout.previous.env.txt
+Q18,hybrid,1,1,1.0,runbooks/tls_certificate.md | alerts/checkout_alerts.md | alerts/payments_alerts.md | docs/system_architecture.md | alerts/platform_alerts.md
+Q19,hybrid,1,1,0.5,runbooks/oom.md | alerts/platform_alerts.md | docs/deployment_policy.md | docs/slo_policy.md
+Q20,hybrid,1,1,1.0,docs/system_architecture.md | runbooks/queue_backlog.md | incidents/INC-001-checkout-redis.md | logs/checkout.log | configs/checkout.previous.env.txt
+Q22,hybrid,1,1,0.3333333333333333,incidents/INC-002-payments-db-pool.md | postmortems/PM-002-db-leak.md | runbooks/db_pool.md | postmortems/PM-001-redis.md | configs/payments.env.txt
+Q23,hybrid,1,1,0.5,incidents/INC-005-worker-oom.md | configs/orders_worker.env.txt | runbooks/oom.md | runbooks/queue_backlog.md | postmortems/PM-002-db-leak.md
+Q24,hybrid,0,0,0.0,postmortems/PM-003-dns.md | runbooks/dns.md | incidents/INC-003-dns.md | runbooks/redis_timeout.md
